@@ -1,0 +1,47 @@
+[xorm] [info]  2015/05/28 23:46:50.972258 [sql] INSERT INTO `account` (`name`, `balance`, `version`) VALUES (?, ?, ?) [args] [Google ChromeBook 168.8 1]
+[xorm] [info]  2015/05/28 23:47:19.875913 [sql] INSERT INTO `account` (`name`, `balance`, `version`) VALUES (?, ?, ?) [args] [Google Google+ 164.8 1]
+[xorm] [info]  2015/05/29 07:04:52.694324 [sql] SELECT count(*) AS `total` FROM `account`
+[xorm] [info]  2015/05/29 07:05:16.694080 [sql] SELECT count(*) AS `total` FROM `account`
+[xorm] [info]  2015/05/29 07:11:43.406419 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 07:12:11.620943 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [6]
+[xorm] [info]  2015/05/29 07:17:56.072916 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 07:18:34.802890 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 07:19:01.665314 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 07:19:51.898357 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 07:23:34.481565 [sql] DELETE FROM `account` WHERE `id` = ? [args] [8]
+[xorm] [info]  2015/05/29 07:23:34.483136 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 12:13:10.500957 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 12:14:30.240220 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 12:14:30.240617 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE `version` = ? [args] [Google Android 189.7 1]
+[xorm] [info]  2015/05/29 12:14:30.242070 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 12:15:00.334795 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 12:17:02.561674 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 12:17:18.536881 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 12:17:18.537182 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE `version` = ? [args] [Google Android 189.7 1]
+[xorm] [info]  2015/05/29 12:17:18.537553 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account`
+[xorm] [info]  2015/05/29 12:22:56.273961 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 12:23:15.079545 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 12:25:03.656413 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 12:25:03.656697 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE (`id` = ?) AND `version` = ? [args] [Google Android 209.39999999999998 1 1]
+[xorm] [info]  2015/05/29 12:26:15.696296 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 12:26:15.696646 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE (`id` = ?) AND `version` = ? [args] [Google Android 309.9 1 2]
+[xorm] [info]  2015/05/29 12:32:04.494669 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 12:32:04.495032 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE (`id` = ?) AND `version` = ? [args] [Google Android 209.39999999999998 1 3]
+[xorm] [info]  2015/05/29 12:32:50.288761 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 12:32:50.289064 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE (`id` = ?) AND `version` = ? [args] [Google Android 108.88999999999999 1 4]
+[xorm] [info]  2015/05/29 12:33:39.474320 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [1]
+[xorm] [info]  2015/05/29 12:33:39.474627 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE (`id` = ?) AND `version` = ? [args] [Google Android 7.829999999999998 1 5]
+[xorm] [info]  2015/05/29 12:46:01.426978 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [2]
+[xorm] [info]  2015/05/29 12:46:01.427220 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [3]
+[xorm] [info]  2015/05/29 12:46:54.371786 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [2]
+[xorm] [info]  2015/05/29 12:46:54.372080 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [4]
+[xorm] [info]  2015/05/29 12:46:54.372319 [sql] BEGIN TRANSACTION
+[xorm] [info]  2015/05/29 12:46:54.372373 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE (`id` = ?) AND `version` = ? [args] [Google Glass 118.8 2 1]
+[xorm] [info]  2015/05/29 12:46:54.372590 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE (`id` = ?) AND `version` = ? [args] [Google Chrome 118.8 4 1]
+[xorm] [info]  2015/05/29 12:46:54.372763 [sql] COMMIT
+[xorm] [info]  2015/05/29 12:47:54.919952 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [2]
+[xorm] [info]  2015/05/29 12:47:54.920258 [sql] SELECT `id`, `name`, `balance`, `version` FROM `account` WHERE `id` = ? LIMIT 1 [args] [4]
+[xorm] [info]  2015/05/29 12:47:54.920579 [sql] BEGIN TRANSACTION
+[xorm] [info]  2015/05/29 12:47:54.920636 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE (`id` = ?) AND `version` = ? [args] [Google Glass 18.700000000000003 2 2]
+[xorm] [info]  2015/05/29 12:47:54.920871 [sql] UPDATE `account` SET `name` = ?, `balance` = ?, `version` = `version` + 1 WHERE (`id` = ?) AND `version` = ? [args] [Google Chrome 218.89999999999998 4 2]
+[xorm] [info]  2015/05/29 12:47:54.921061 [sql] COMMIT

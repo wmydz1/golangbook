@@ -1,0 +1,127 @@
+<html>
+<head>
+<script type="text/javascript">
+var ws, path;
+if(!("WebSocket" in window))
+{
+	alert("unsupport websocket!");
+}
+else
+{
+    path = location.pathname;
+	path = path.substring(0, path.lastIndexOf("/"));
+	ws = new WebSocket("ws://" + location.host + path + "/interact");
+	ws.onopen = function()
+	{
+		// alert("ready to go!");
+	};
+	ws.onmessage = function(m)
+	{
+		var o, e = JSON.parse(m.data);
+		if(e.error!=undefined)
+		{
+			alert(e.error);
+			return;
+		}
+		e = e.answer;
+		for(var key in e)
+		{
+			o = document.getElementById(key);
+			if(o.type==undefined)
+			{
+				continue;
+			}
+			if(o.type=="radio" || o.type=="check")
+			{
+				continue;
+			}
+			if(o.type=="container")
+			{
+				o.innerHTML = e[key];
+			}
+			else
+			{
+				o.value = e[key];
+			}
+		}
+	};
+	ws.onclose = function()
+	{
+		// alert("connection is closed");
+	};
+}
+function findset(e)
+{
+	var n = e.childNodes;
+	var s = new Array();
+	if(e.type!="radio" || e.type!="check")
+	{
+		return;
+	}
+	for(var i=0; i<n.length; i++)
+	{
+		if(n[i].checked)
+		{
+			s.push(n[i].value)
+		}
+	}
+	return s.join("|");
+}
+function myfunc(e)
+{
+	var o, m, s = {};
+	o = document.getElementsByTagName("input");
+	for(var i=0; i<o.length; i++)
+	{
+		if(o[i].type=="text" || o[i].type=="password")
+		{
+			s[o[i].id] = o[i].value;
+		}
+	}
+	o = document.getElementsByTagName("textarea");
+	for(var i=0; i<o.length; i++)
+	{
+		s[o[i].id] = o[i].value;
+	}
+	o = document.getElementsByTagName("select");
+	for(var i=0; i<o.length; i++)
+	{
+		s[o[i].id] = o[i].value;
+	}
+	o = document.getElementsByTagName("form");
+	for(var i=0; i<o.length; i++)
+	{
+		m = findset(o[i]);
+		if(m!=undefined)
+		{
+			s[o[i].id] = m;
+		}
+	}
+	ws.send(JSON.stringify({"call":e.id, "param":s}));
+}
+</script>
+</head>
+<body>
+<form>
+<div style="position:relative; margin:auto; width:180; height:220; border-style:solid; border-width:1px; border-color:#000">
+<input type="text" id="tx" value="0" style="position:absolute; left:10; top:10; width:160; height:40" readonly="readonly" />
+<input type="button" id="n0" value="0" style="position:absolute; left:10; top:170; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="n1" value="1" style="position:absolute; left:10; top:130; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="n2" value="2" style="position:absolute; left:50; top:130; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="n3" value="3" style="position:absolute; left:90; top:130; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="n4" value="4" style="position:absolute; left:10; top:90; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="n5" value="5" style="position:absolute; left:50; top:90; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="n6" value="6" style="position:absolute; left:90; top:90; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="n7" value="7" style="position:absolute; left:10; top:50; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="n8" value="8" style="position:absolute; left:50; top:50; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="n9" value="9" style="position:absolute; left:90; top:50; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="pt" value="." style="position:absolute; left:50; top:170; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="o1" value="+" style="position:absolute; left:130; top:50; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="o2" value="-" style="position:absolute; left:130; top:90; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="o3" value="*" style="position:absolute; left:130; top:130; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="o4" value="/" style="position:absolute; left:130; top:170; width:40; height:40" onClick="javascript:myfunc(this);" />
+<input type="button" id="eq" value="=" style="position:absolute; left:90; top:170; width:40; height:40" onClick="javascript:myfunc(this);" />
+</div>
+</form>
+</body>
+</html>
