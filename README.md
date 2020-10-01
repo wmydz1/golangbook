@@ -1,6 +1,3 @@
-# samchen's golang book
-
+# golang book
 
 ![Alt text](images/index.jpg)
-
-
